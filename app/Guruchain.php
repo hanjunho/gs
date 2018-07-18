@@ -8,5 +8,5 @@ class Guruchain extends Model
 {
     //sdf
 
-    public $table = 'guruchains';
+    protected $table = 'Guruchain';
 } 
