@@ -53,7 +53,7 @@
   chgrp -h -R www-data {{ $release_dir }}/{{ $distname }};
 
   sudo service nginx restart;
-  sudo service php7.0-fpm restart;
+  sudo service php7.1-fpm restart;
 @endtask
 
 
