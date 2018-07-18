@@ -8,5 +8,5 @@ class Guruchain extends Model
 {
     //
 
-    protected $table = 'guruchains';
+    public $table = 'guruchains';
 }
