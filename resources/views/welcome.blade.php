@@ -13,7 +13,8 @@
     </div>
     @endif
     <table class="list-table">
-    @forelse($lists as $list)
+@forelse ( $lists as $list )
+
 
     <tr class="
         @if($list->cafeBoardName == '원리와 방법1') origin
@@ -27,7 +28,7 @@
         ">
         <td class="list_label">
             <?php 
-                $pdate = strtotime($list->createdAt); 
+                $pdate = strtotime($list['createdAt']); 
                 $ydate = date( 'Y', $pdate );
                 $mdate = date( 'm-d', $pdate );
                 $tdate = date( 'H:m', $pdate );
@@ -39,7 +40,10 @@
             </span>
         </td>
         <td class="title">
-            <a target="_blank" href="http://guruchain.com/#/greatboss/1/boards/{{ $list->cafeBoardId }}/articles/{{ $list->id }}/read">{{ $list->title }}</a>
+            @if($list->rootId)
+               <a class="parent" target="_blank" href="http://guruchain.com/#/greatboss/1/boards/{{ $list->cafeBoardId }}/articles/{{ $list->rootId }}/read">원글</a><br>
+            @endif
+            <a class="{{ isset($list->depth) ? 'depth' : '' }}" target="_blank" href="http://guruchain.com/#/greatboss/1/boards/{{ $list->cafeBoardId }}/articles/{{ $list->id }}/read">{{ $list->title }}</a>
        
             <span class="creator @if( $list->creatorNm=='경영 수업' ) master @endif"> <a href="/sort/{{ $list->creatorNm }}">{{ $list->creatorNm }}</a> </span>
         </td>
@@ -47,12 +51,10 @@
 
     @empty
       <p>There is no article!</p>
-    @endforelse
+@endforelse
     </table>
+    <footer>
 
-    @if($lists)
-    <div class="text-center">
-      {!! $lists->render() !!}
-    </div>
-    @endif
+    </footer>
+
 @stop

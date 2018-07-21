@@ -28,26 +28,36 @@ Route::get('/', function () {
     // var_dump($event->time);
 });
 */
+
+/*
 Route::get('/', function() {
-    $lists = App\Guruchain::orderBy( 'createdAt' )->paginate(100);
+    $lists = App\Guruchain::orderBy( 'createdAt' )->paginate(30);
 
     return view('welcome', compact('lists'));
 });
 
 Route::get('/sort/{name}', function($name) {
-    $lists = App\Guruchain::where('creatorNm',$name)->orderBy( 'createdAt' )->paginate(100);
+    $lists = App\Guruchain::where('creatorNm',$name)->orderBy( 'createdAt' )->paginate(30);
     return view('welcome', compact('lists')); 
 });
 
 Route::get('/sortb/{name}', function($name) {
-    $lists = App\Guruchain::where('cafeBoardName',$name)->orderBy( 'createdAt' )->paginate(100);
+    $lists = App\Guruchain::where('cafeBoardName',$name)->orderBy( 'createdAt' )->paginate(30);
     return view('welcome', compact('lists')); 
 });
 
 Route::get('/sortc/', function() {
-    $lists = App\Guruchain::where('cafeBoardName','원리와 방법1' )->orWhere('cafeBoardName','글읽고 질문')->orWhere('cafeBoardName','정회원 이상 공지')->orderBy( 'createdAt' )->paginate(100);
+    $lists = App\Guruchain::where('cafeBoardName','원리와 방법1' )->orWhere('cafeBoardName','글읽고 질문')->orWhere('cafeBoardName','정회원 이상 공지')->orderBy( 'createdAt' )->paginate(30);
     return view('welcome', compact('lists')); 
 });
+
+*/
+
+Route::get('/','IndexController@index');
+Route::get('/sort/{name}','IndexController@sort');
+Route::get('/sortb/{name}','IndexController@sortb');
+Route::get('/sortc/','IndexController@sortc');
+
 
 Route::resource('posts', 'PostsController');
 Route::get('posts', [

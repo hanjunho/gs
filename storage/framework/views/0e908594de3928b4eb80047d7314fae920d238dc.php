@@ -12,7 +12,8 @@
     </div>
     <?php endif; ?>
     <table class="list-table">
-    <?php $__empty_1 = true; $__currentLoopData = $lists; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $list): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+<?php $__empty_1 = true; $__currentLoopData = $lists; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $list): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+
 
     <tr class="
         <?php if($list->cafeBoardName == '원리와 방법1'): ?> origin
@@ -26,7 +27,7 @@
         ">
         <td class="list_label">
             <?php 
-                $pdate = strtotime($list->createdAt); 
+                $pdate = strtotime($list['createdAt']); 
                 $ydate = date( 'Y', $pdate );
                 $mdate = date( 'm-d', $pdate );
                 $tdate = date( 'H:m', $pdate );
@@ -38,7 +39,10 @@
             </span>
         </td>
         <td class="title">
-            <a target="_blank" href="http://guruchain.com/#/greatboss/1/boards/<?php echo e($list->cafeBoardId); ?>/articles/<?php echo e($list->id); ?>/read"><?php echo e($list->title); ?></a>
+            <?php if($list->rootId): ?>
+               <a class="parent" target="_blank" href="http://guruchain.com/#/greatboss/1/boards/<?php echo e($list->cafeBoardId); ?>/articles/<?php echo e($list->rootId); ?>/read">원글</a><br>
+            <?php endif; ?>
+            <a class="<?php echo e(isset($list->depth) ? 'depth' : ''); ?>" target="_blank" href="http://guruchain.com/#/greatboss/1/boards/<?php echo e($list->cafeBoardId); ?>/articles/<?php echo e($list->id); ?>/read"><?php echo e($list->title); ?></a>
        
             <span class="creator <?php if( $list->creatorNm=='경영 수업' ): ?> master <?php endif; ?>"> <a href="/sort/<?php echo e($list->creatorNm); ?>"><?php echo e($list->creatorNm); ?></a> </span>
         </td>
@@ -46,15 +50,12 @@
 
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
       <p>There is no article!</p>
-    <?php endif; ?>
+<?php endif; ?>
     </table>
+    <footer>
 
-    <?php if($lists): ?>
-    <div class="text-center">
-      <?php echo $lists->render(); ?>
+    </footer>
 
-    </div>
-    <?php endif; ?>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
