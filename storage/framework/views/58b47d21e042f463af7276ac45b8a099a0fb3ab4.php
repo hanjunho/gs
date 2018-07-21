@@ -16,8 +16,9 @@
         .list-table td {padding:6px 0 0px;}
         .origin a {font-size: 1.5em; font-weight:bold; color:#000;}
         .master a {font-size:1.3em; }
-        .master.qna .parent {font-size:10px;}
-        .master.qna .depth {padding-left:15px; color:#00f;}
+        .qna .parent {font-size:10px;}
+        .qna .depth {padding-left:15px; }
+        .master.qna .depth {color:#00f;}
         .list_label {position: relative;width:114px; height:28px;}
         .list_label span {position: absolute;}
         .list_label .board_name {top:50%; left:36px; font-size:10px; margin-top:-13px;}
