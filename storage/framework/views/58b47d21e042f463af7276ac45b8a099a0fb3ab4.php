@@ -18,7 +18,7 @@
         .list-table td {position:relative; padding:6px 0 0px; line-height:1.3;}
         .origin a {font-size: 1.5em; font-weight:bold; color:#000;}
         .master a {font-size:1.3em; }
-        .list-table .parent {position:absolute; top:3px; left:-3px; font-family:'Lato'; font-size:8px; border:1px solid #ccc; border-radius:3px; padding:1px; background:#fff;}
+        .list-table .parent {position:absolute; top:3px; left:-3px; font-family:'Lato'; font-size:8px !important; border:1px solid #ccc; border-radius:3px; padding:1px; background:#fff;}
         .list-table .depth {padding-left:15px; }
         .master.qna .depth {color:#00f;}
         .list_label {position: relative;width:94px; height:28px;}
