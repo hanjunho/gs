@@ -33,15 +33,15 @@
                 $mdate = date( 'm-d', $pdate );
                 $tdate = date( 'H:m', $pdate );
             ?>
-            <span class="year"><?php echo $ydate; ?></span>
             <span class="board_name"><a href="/sortb/{{ $list->cafeBoardName }}">{{ $list->cafeBoardName }}</a></span>
-            <span class="date">
+            <span class="time year"><?php echo $ydate; ?></span>
+            <span class="time date">
                 <?php echo $mdate." <small>".$tdate."</small>"; ?>
             </span>
         </td>
         <td class="title">
             @if($list->rootId)
-               <a class="parent" target="_blank" href="http://guruchain.com/#/greatboss/1/boards/{{ $list->cafeBoardId }}/articles/{{ $list->rootId }}/read">원글</a><br>
+               <a class="parent" target="_blank" href="http://guruchain.com/#/greatboss/1/boards/{{ $list->cafeBoardId }}/articles/{{ $list->rootId }}/read">원글</a>
             @endif
             <a class="@if($list->depth==1) depth @endif" target="_blank" href="http://guruchain.com/#/greatboss/1/boards/{{ $list->cafeBoardId }}/articles/{{ $list->id }}/read">{{ $list->title }}</a>
        

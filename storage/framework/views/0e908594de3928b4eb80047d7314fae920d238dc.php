@@ -32,15 +32,15 @@
                 $mdate = date( 'm-d', $pdate );
                 $tdate = date( 'H:m', $pdate );
             ?>
-            <span class="year"><?php echo $ydate; ?></span>
             <span class="board_name"><a href="/sortb/<?php echo e($list->cafeBoardName); ?>"><?php echo e($list->cafeBoardName); ?></a></span>
-            <span class="date">
+            <span class="time year"><?php echo $ydate; ?></span>
+            <span class="time date">
                 <?php echo $mdate." <small>".$tdate."</small>"; ?>
             </span>
         </td>
         <td class="title">
             <?php if($list->rootId): ?>
-               <a class="parent" target="_blank" href="http://guruchain.com/#/greatboss/1/boards/<?php echo e($list->cafeBoardId); ?>/articles/<?php echo e($list->rootId); ?>/read">원글</a><br>
+               <a class="parent" target="_blank" href="http://guruchain.com/#/greatboss/1/boards/<?php echo e($list->cafeBoardId); ?>/articles/<?php echo e($list->rootId); ?>/read">원글</a>
             <?php endif; ?>
             <a class="<?php if($list->depth==1): ?> depth <?php endif; ?>" target="_blank" href="http://guruchain.com/#/greatboss/1/boards/<?php echo e($list->cafeBoardId); ?>/articles/<?php echo e($list->id); ?>/read"><?php echo e($list->title); ?></a>
        

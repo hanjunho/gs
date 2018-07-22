@@ -9,6 +9,9 @@ class IndexController extends Controller
   public function index() {
     $lists = \App\Guruchain::orderBy( 'createdAt' )->paginate(30);
 
+
+
+
     return view('welcome', compact('lists'));
   }
 

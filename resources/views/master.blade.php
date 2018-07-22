@@ -6,28 +6,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Gothic+A1:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
         <style type="text/css">
         *, body {font-family: "Gothic A1";}
         a {color:#000;}
         h1 {text-align: center;}
         h2 {color:red;}
 
-        .list-table {min-width:480px; margin:0 auto;}
-        .list-table td {padding:6px 0 0px;}
+        .list-table {max-width:1140px; margin:0 auto;}
+        .list-table td {position:relative; padding:6px 0 0px; line-height:1.3;}
         .origin a {font-size: 1.5em; font-weight:bold; color:#000;}
         .master a {font-size:1.3em; }
-        .list-table .parent {font-size:10px;}
+        .list-table .parent {position:absolute; top:3px; left:-3px; font-family:'Lato'; font-size:8px; border:1px solid #ccc; border-radius:3px; padding:1px; background:#fff;}
         .list-table .depth {padding-left:15px; }
         .master.qna .depth {color:#00f;}
-        .list_label {position: relative;width:114px; height:28px;}
-        .list_label span {position: absolute;}
-        .list_label .board_name {top:50%; left:36px; font-size:10px; margin-top:-13px;}
-        .list_label .board_name > a {display:inline-block; font-size:9px; }
-        .list_label .date {bottom:50%; left:36px; font-size:11px; margin-bottom:-13px; font-style:italic;}
-        .list_label .date small {font-size:0.75em;}
+        .list_label {position: relative;width:94px; height:28px;}
+        .list_label .board_name {display:block; line-height:0.9; }
+        .list_label .board_name > a {display:inline-block; font-size:10px; }
+        .list_label .time, .list_label .time * {font-family:'Lato'; font-weight:300;}
+        .list_label .year {font-size:8px;}
+        .list_label .date {font-size:8px; }
+        .list_label .date small {font-size:8px;}
         .list_label .date a {font-size:10px; }
-        .list_label .year {top:50%; margin-top:-9px; font-size:14px; font-style:italic;}
-        .coffee a {color: #656565; font-size:12px; font-weight:normal;}
+        
+        .coffee, .coffee a {color: #858585; font-weight:normal;}
         .coffee.master .title a {color: #000; font-size:1.3em; }
         .qna a {font-size:14px;}
         .notice .board_name a {font-weight: bold;}
