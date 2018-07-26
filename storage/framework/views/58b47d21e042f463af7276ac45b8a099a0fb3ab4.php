@@ -11,13 +11,12 @@
         <style type="text/css">
         header, #app {background:#fff;}
         header {padding-top:15px;}
-        h1 {margin-top:0;}
         *, body {font-family: "Gothic A1";}
         body { background:#000;}
         a {color:#000;}
 
         .wrap {max-width: 1140px; margin:0 auto;}
-        h1 {text-align: left; font-size:15px;}
+        h1 {margin-top:0; text-align: left; font-size:18px;}
         h2 {color:red;}
 
         .list-table {max-width:1140px; margin:0 auto;}
@@ -64,7 +63,6 @@
                 <h1><a href="/">경영수업 시간순 정렬</a></h1>
                 <ul class="other-sort text-center">
                     <li><a href="/">원리와 방법1</a></li>
-                    <li><a href="/sortb/글읽고 질문">글읽고 질문</a></li>
                     <li><a href="/all/">전체보기</a></li>
                     <li><a href="/sortc/">커피게시판 제외</a></li>
                     <li><a href="/all/">커피게시판 삽입</a></li>
