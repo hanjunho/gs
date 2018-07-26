@@ -54,6 +54,7 @@ Route::get('/sortc/', function() {
 */
 
 Route::get('/','IndexController@index');
+Route::get('/all/','IndexController@all');
 Route::get('/sort/{name}','IndexController@sort');
 Route::get('/sortb/{name}','IndexController@sortb');
 Route::get('/sortc/','IndexController@sortc');

@@ -1,13 +1,8 @@
 @extends('master')
 
 @section('content')
-    <h1> <a href="/">경영수업 시간순 정렬</a></h1>
+    
     @if($lists)
-    <ul class="other-sort text-center">
-        <li><a target="_blank" href="http://guruchain.com/#/greatboss/1/boards/1179/articles/8147/read">[원리와 방법1] 게시판 정리</a></li>
-        <li><a href="/sortc/">커피게시판 제외</a></li>
-    </ul>
-
     <div class="text-center">
       {!! $lists->render() !!}
     </div>
@@ -30,13 +25,14 @@
             <?php 
                 $pdate = strtotime($list['createdAt']); 
                 $ydate = date( 'Y', $pdate );
-                $mdate = date( 'm-d', $pdate );
+                $mdate = date( 'm', $pdate );
+                $ddate = date( 'd', $pdate );
                 $tdate = date( 'H:m', $pdate );
             ?>
             <span class="board_name"><a href="/sortb/{{ $list->cafeBoardName }}">{{ $list->cafeBoardName }}</a></span>
             <span class="time year"><?php echo $ydate; ?></span>
             <span class="time date">
-                <?php echo $mdate." <small>".$tdate."</small>"; ?>
+                <a href="/sortb/{{$list->createdAt}}"><?php echo $mdate."</a>-".$ddate." <small>".$tdate."</small>"; ?>
             </span>
         </td>
         <td class="title">
