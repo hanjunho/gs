@@ -58,8 +58,9 @@
         </script>
     </head>
     <body>
-        <p> http://guruchaingo.com   으로도 접속 가능합니다 </p>
+        
         <header>
+            <p> 조작미숙으로 기존주소는 이용불가합니다. <a href="http://guruchaingo.com">http://guruchaingo.com</a>   으로 접속 부탁드립니다 </p>
             <div class="wrap">
                 <h1><a href="/">경영수업 시간순 정렬</a></h1>
                 <ul class="other-sort text-center">
