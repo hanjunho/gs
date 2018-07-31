@@ -36,9 +36,9 @@
         </td>
         <td class="title">
             <?php if($list->rootId): ?>
-               <a class="parent" target="_blank" href="http://guruchain.com/#/greatboss/1/boards/<?php echo e($list->cafeBoardId); ?>/articles/<?php echo e($list->rootId); ?>/read">원글</a>
+               <a class="parent" target="_blank" data-popup="true" href="http://www.guruchain.com/#/greatboss/1/boards/<?php echo e($list->cafeBoardId); ?>/articles/<?php echo e($list->rootId); ?>/read">원글</a>
             <?php endif; ?>
-            <a class="<?php if($list->depth==1): ?> depth <?php endif; ?>" target="_blank" href="http://guruchain.com/#/greatboss/1/boards/<?php echo e($list->cafeBoardId); ?>/articles/<?php echo e($list->id); ?>/read"><?php echo e($list->title); ?></a>
+            <a class="<?php if($list->depth==1): ?> depth <?php endif; ?>" target="_blank" data-popup="true" href="http://www.guruchain.com/#/greatboss/1/boards/<?php echo e($list->cafeBoardId); ?>/articles/<?php echo e($list->id); ?>/read"><?php echo e($list->title); ?></a>
        
             <span class="creator <?php if( $list->creatorNm=='경영 수업' ): ?> master <?php endif; ?>"> <a href="/sort/<?php echo e($list->creatorNm); ?>"><?php echo e($list->creatorNm); ?></a> </span>
         </td>
