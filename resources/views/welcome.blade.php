@@ -37,9 +37,9 @@
         </td>
         <td class="title">
             @if($list->rootId)
-               <a class="parent" target="_blank" data-popup="true" href="http://www.guruchain.com/#/greatboss/1/boards/{{ $list->cafeBoardId }}/articles/{{ $list->rootId }}/read">원글</a>
+               <a class="parent" target="_blank" href="http://www.guruchain.com/#/greatboss/1/boards/{{ $list->cafeBoardId }}/articles/{{ $list->rootId }}/read">원글</a>
             @endif
-            <a class="@if($list->depth==1) depth @endif" target="_blank" data-popup="true" href="http://www.guruchain.com/#/greatboss/1/boards/{{ $list->cafeBoardId }}/articles/{{ $list->id }}/read">{{ $list->title }}</a>
+            <a class="@if($list->depth==1) depth @endif" target="_blank" href="http://www.guruchain.com/#/greatboss/1/boards/{{ $list->cafeBoardId }}/articles/{{ $list->id }}/read">{{ $list->title }}</a>
        
             <span class="creator @if( $list->creatorNm=='경영 수업' ) master @endif"> <a href="/sort/{{ $list->creatorNm }}">{{ $list->creatorNm }}</a> </span>
         </td>
