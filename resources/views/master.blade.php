@@ -70,7 +70,7 @@
                 </ul>
             </div>
             
-            <p>Ctrl + 클릭으로 새 탭을 열고 로그인을 먼저 하세요. 창이 자동으로 닫히지 않게 됩니다.</p>            
+            <p>먼저 Ctrl (Cmd) + 클릭으로 새 탭을 열고 guruchain.com 로그인을 먼저 하세요. </p>            
         </header>
         <div id="app">
             @yield('content')

@@ -3,7 +3,7 @@
 
 @setup
   $username = 'dev';                     // 서버의 사용자 계정
-  $remote = 'git@github.com:hanjunho/myapp.git';  // 깃허브 저장소 주소
+  $remote = 'git@github.com:hanjunho/gs.git';  // 깃허브 저장소 주소
   // $remote = 'git@github.com:USER/myapp.git';  // 깃허브 저장소 주소
   $base_dir = "/home/{$username}/www";        // 웹서비스를 담을 기본 디렉터리
   $project_root = "{$base_dir}/myapp";        // 프로젝트 루트 디렉터리
