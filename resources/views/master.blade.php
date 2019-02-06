@@ -5,13 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Gothic+A1:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+        <!-- link href="https://fonts.googleapis.com/css?family=Gothic+A1:100,200,300,400,500,600,700,800,900" rel="stylesheet" -->
+        <!-- link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet" -->
+        <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
         <style type="text/css">
         header, #app {background:#fff;}
         header {padding-top:15px;}
-        *, body {font-family: "Gothic A1";}
+        *, body {font-family: "Spoqa Han Sans";}
         body { background:#000;}
         a {color:#000;}
 
@@ -69,6 +69,7 @@
                     <li><a href="/all/">커피게시판 삽입</a></li>
                 </ul>
             </div>
+            <p>Ctrl + 클릭으로 새 탭을 열고 로그인을 먼저 하세요. 창이 자동으로 닫히지 않게 됩니다.</p>
         </header>
         <div id="app">
             @yield('content')
