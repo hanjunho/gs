@@ -69,6 +69,7 @@
                     <li><a href="/all/">커피게시판 삽입</a></li>
                 </ul>
             </div>
+            <p>Ctrl + 클릭으로 새 탭을 열고 로그인을 먼저 하세요. 창이 자동으로 닫히지 않게 됩니다.</p>            
         </header>
         <div id="app">
             <?php echo $__env->yieldContent('content'); ?>
